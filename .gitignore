@@ -1,0 +1,64 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Compiled files
+*.so
+
+# Distribution
+build/
+dist/
+*.egg-info/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment Variables
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Temporary Scripts
+/app/scripts/
+documents/
+
+# Personal Notes
+notes.txt
+ToLearn.txt
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Misc
+*.tmp
+*.bak
