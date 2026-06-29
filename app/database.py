@@ -1,7 +1,15 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
+import os
+from dotenv import load_dotenv
 
-DATABASE_URL = "postgresql+psycopg://postgres:password@localhost:5432/ai_knowledge_hub"
+load_dotenv()
+
+DATABASE_URL = os.environ["DATABASE_URL"]
+
+if not DATABASE_URL:
+    raise RuntimeError("Database url is not there")
+
 
 engine = create_engine(
     DATABASE_URL,
