@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 import logging
 from app.init_db import init_db
-
+from app.routers.collections import router as collection_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -18,6 +18,7 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+app.include_router(collection_router, prefix="/collections", tags=["Collections"])
 
 # ================================================================================
 
