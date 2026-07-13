@@ -1,5 +1,6 @@
 from sqlalchemy import Column, DateTime, ForeignKey, Integer, String
 from sqlalchemy.sql import func
+from sqlalchemy.orm import relationship
 
 from app.database import Base
 
@@ -23,4 +24,9 @@ class Document(Base):
     uploaded_at = Column(
         DateTime(timezone=True),
         server_default=func.now()
+    )
+    
+    collection = relationship(
+        "Collection",
+        back_populates="documents"
     )
